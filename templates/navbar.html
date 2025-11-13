@@ -2,11 +2,10 @@
 <html>
 <head>
  <title>Home | SD Reconnect</title>
-</head>
 
-<body>
 
-<header>
+
+
     <style>
         body {
                 background-image: url("static/images/Background.png");
@@ -27,25 +26,26 @@
 
    /* Default logo size for larger screens */
 .logo {
-  width: 500px;
+  max-width: 300px;
   height: auto;
   display: block;
   margin: 15px auto; /* centers on desktop */
 }
 
 /* Smaller screens */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .logo {
-    width: 90%;   /* shrink to fit */
+    width: 90%;
     height: auto;
   }
 }
 
 
     </style>
+<head>
 
-
-
+<body>
+<header>
   <a href="/" style="display:inline-block; vertical-align:middle; margin-right:20px">
     <img class="logo"
          src="static/images/SDReconnect_logo.png"
@@ -76,10 +76,10 @@
 
 
 
+<header>
 
 
 
-</header>
 
 {% block content %}{% endblock %}
 </body>
