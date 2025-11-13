@@ -183,13 +183,26 @@
 
 {% elif tab == 'Category' %}
   {% if category_name == 'medical' %}
-    <section style="text-align: center; padding: 50px">
-      <h2> <div style="font-size: 60px;">Medical Aid & Support Centers</h2>
-        <p><div style="font-size: 30px;">San Diego County</p>
+    <section  class="medicalpageback" style="text-align: center; padding: 50px">
+      <h2 style="font-size: 60px;">Medical Aid & Support Centers</h2>
+        <p style="font-size: 30px;">San Diego County</p>
             <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
             <script src='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js'></script>
             <link href='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css' rel='stylesheet' />
             <style>
+
+
+                .medicalpageback {
+                background-image: url("{{ url_for('static', filename='images/Medical_Back.png')}}");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: white;
+                background-size: cover;
+                background-attachment: scroll;
+                padding-top: 60px;
+
+              }
+
 
                 #map {width: 100%; max-width: 1000px; height: 500px; margin: 0 auto;
 }
