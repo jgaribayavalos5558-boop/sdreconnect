@@ -9,7 +9,7 @@
 <header>
     <style>
         body {
-                background-image: url("{{ url_for('static', filename='images/Background.png') }}");
+                background-image: url("static/images/Background.png");
                 background-repeat: no-repeat;
                 background-position: center top;
                 background-color: white;
@@ -24,13 +24,30 @@
       border-radius: 6px;
       font-size: 20px;
     }
+
+        /* Default styles for larger screens */
+img {
+  width: 500px; /* Example fixed width for desktop */
+  height: auto;
+}
+
+/* Styles for screens smaller than 768px (e.g., tablets and mobiles) */
+@media only screen and (max-width: 768px) {
+  img {
+    width: 100%; /* Make images fill the width on smaller screens */
+    height: auto;
+  }
+}
+
+
     </style>
+
 
 
   <a href="/" style="display:inline-block; vertical-align:middle; margin-right:20px">
     <img
          style="margin-top: 15px;margin-right:20px"
-         src="{{ url_for('static', filename='images/SDReconnect_logo.png') }}"
+         src="static/images/SDReconnect_logo.png"
          alt="San Diego RECONNECT Logo" width="300">
   </>
 
