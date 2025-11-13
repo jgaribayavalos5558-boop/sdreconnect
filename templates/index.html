@@ -185,13 +185,14 @@
   {% if category_name == 'medical' %}
     <section style="text-align: center; padding: 50px">
       <h2>Medical Aid</h2>
-            <title>The Map</title>
+        <p>Map is Here:</p>
             <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
             <script src='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js'></script>
             <link href='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css' rel='stylesheet' />
             <style>
                 body { margin: 0; padding: 0; }
-                #map { display: inline-block; position: relative; top: 0px; left: 0px;  height: 500px; width: 1000px}
+                #map {width: 100%; max-width: 1000px; height: 500px; margin: 0 auto;
+}
             </style>
                 <div id= 'map'></div>
                 <script>
@@ -293,9 +294,9 @@ for (let i = 0; i < shelters.length; i++) {
       <p>TBD.</p>
     </section>
 
-  {% elif category_name == 'medical' %}
+  {% elif category_name == 'housing' %}
     <section style="text-align: center; padding: 50px">
-      <h2>Medical Aid Services</h2>
+      <h2>Housing & Shelter</h2>
       <p>TBD.</p>
     </section>
 
