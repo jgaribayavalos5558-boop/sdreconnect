@@ -327,7 +327,7 @@ for (let i = 0; i < medical_centers.length; i++) {
                     const map = new mapboxgl.Map({
                     container: 'map2',
                     style: 'mapbox://styles/mapbox/streets-v12',
-                    center: [-117.079553, 32.741737],
+                    center: [-117.16, 32.72],
                     zoom: 11
                     });
 
@@ -335,12 +335,12 @@ for (let i = 0; i < medical_centers.length; i++) {
     {'id': 0, 'lat': 32.70339, 'lon': -117.15072, 'name': 'Alpha Project Bridge Shelter I'},
     {'id': 1, 'lat': 32.70639, 'lon': -117.14864, 'name': 'Alpha Project Bridge Shelter II'},
     {'id': 2, 'lat': 32.70561, 'lon': -117.15011, 'name': 'Father Joe\'s Villages Bishop Maher Center'},
-    {'id': 3, 'lat': 32.75317, 'lon': -117.20764, 'name': 'Community Harm Reduction Shelter (C-HRT'},
-    {'id': 4, 'lat': 32.74428, 'lon': -117.19197, 'name': 'Point Loma Campus (Veterans Village of San Diego)'},
+    {'id': 3, 'lat': 32.75317, 'lon': -117.20764, 'name': 'Community Harm Reduction Shelter<br>(C-HRT)'},
+    {'id': 4, 'lat': 32.74428, 'lon': -117.19197, 'name': 'Point Loma Campus<br>(Veterans Village of San Diego)'},
     {'id': 5, 'lat': 32.71325, 'lon': -117.15733, 'name': 'Rachel\'s Promise Women\'s Shelter'},
     {'id': 6, 'lat': 32.75325, 'lon': -117.20094, 'name': 'Rosecrans Shelter'},
     {'id': 7, 'lat': 32.71867, 'lon': -117.15939, 'name': 'PATH Connections Housing'},
-    {'id': 8, 'lat': 32.66822, 'lon': -117.17103, 'name': 'South County Lighthouse (San Diego Rescue Mission)'},
+    {'id': 8, 'lat': 32.66822, 'lon': -117.17103, 'name': 'South County Lighthouse<br>(San Diego Rescue Mission)'},
     {'id': 9, 'lat': 32.72258, 'lon': -117.19233, 'name': 'Seniors Landing Bridge Shelter'},
     {'id': 10, 'lat': 32.74478, 'lon': -117.19233, 'name': 'Community Harm Reduction Safe Haven Shelter'}
 ]
@@ -354,7 +354,7 @@ for (let i = 0; i < shelters.length; i++) {
       .setPopup(
         new mapboxgl.Popup({ offset: 25, maxWidth: "none" })
           .setHTML(
-            `<div style="font-size: 30px;padding: 50px;max-width: 600px;"><strong>${shelter.name}<strong><br>
+            `<div style="font-size: 30px;padding: 30px;max-width: 600px;"><strong>${shelter.name}<strong><br>
             <div style="font-size: 30px;padding: 30px;max-width: 600px;">Location:<br><br>${shelter.id}</div>
 
           `)
