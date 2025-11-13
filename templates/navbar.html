@@ -8,7 +8,7 @@
 
     <style>
         body {
-                background-image: url("static/images/Background.png");
+                background-image: url("{{ url_for('static', filename='images/Background.png')}}");
                 background-repeat: no-repeat;
                 background-position: center top;
                 background-color: white;
@@ -50,7 +50,7 @@
 <header>
   <a href="/" style="display:inline-block; vertical-align:middle; margin-right:20px">
     <img class="logo"
-         src="static/images/SDReconnect_logo.png"
+         src = "{{ url_for('static', filename='images/SDReconnect_logo.png') }}"
          alt="San Diego RECONNECT Logo">
   </a>
 
