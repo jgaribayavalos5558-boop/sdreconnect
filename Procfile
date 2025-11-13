@@ -1,1 +1,2 @@
-web: flask SD_Reconnect:app
+web: gunicorn SD_Reconnect:app
+
