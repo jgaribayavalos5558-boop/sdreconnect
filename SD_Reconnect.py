@@ -42,7 +42,7 @@ def category_page(category_name):
 
 @app.route('/about')
 def about():
-    return render_template('index.html', tab='About This Website')
+    return render_template('index.html', tab='Our Mission')
 
 @app.route('/trends')
 def trends():
@@ -50,7 +50,7 @@ def trends():
 
 @app.route('/contact')
 def contact():
-    return render_template('index.html', tab='Contact Us')
+    return render_template('index.html', tab='Emergency Help')
 
 
 
