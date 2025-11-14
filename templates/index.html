@@ -4,13 +4,8 @@
 
 {% if tab == 'Home | SD Reconnect' %}
   <section style="text-align: center; padding: 50px">
-    <h2>Our Mission</h2>
-    <p>TBD.</p>
-    <iframe width="560" height="315"
-        src="https://www.youtube.com/embed/xCihADw94v4?playlist=xCihADw94v4&loop=1&autoplay=1&mute=1"
-        title="San Diego RECONNECT Mission Video"
-        allowfullscreen>
-    </iframe>
+  <img src="{{ url_for('static', filename='images/homeimage.png') }}"
+     alt="Alternative text" style="width:100%; height:100%;">
   </section>
 
 <!--SUBHEAD : HOUSING & SHELTER-->
@@ -23,12 +18,13 @@
            style="width: 100px; border-radius: 8px;">
 
     <div style="margin-top: 20px;">
-      <h2 style="margin: 0; font-size: 60px;">Housing & Shelter</h2>
+      <h2 style="margin: 0; font-size: 60px; font-family: san-serf, Verdana;">Housing & Shelter</h2>
 
     </div>
   </a>
-  <p>
-    TBD.
+  <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">
+    Information on locations and status of current shelters and possible housing opportunities.
+
   </p>
 </section>
 
@@ -43,12 +39,12 @@
 
 
        <div style="margin-top: 20px;">
-      <h2 style="margin: 0;font-size: 60px;">Employment & Job Programs</h2>
+      <h2 style="margin: 0;font-size: 60px; font-family: san-serf, Verdana;">Employment & Job Programs</h2>
 
     </div>
   </a>
-  <p>
-   TBD.
+  <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">
+   Information on possible programs to different pathways and potential job opportunities.
   </p>
 </section>
 
@@ -65,11 +61,12 @@
 
 
        <div style="margin-top: 20px;">
-      <h2 style="margin: 0;font-size: 60px;">Medical Aid</h2>
+      <h2 style="margin: 0;font-size: 60px; font-family: san-serf, Verdana;">Medical Aid</h2>
     </div>
   </a>
-  <p>
-   TBD.
+  <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">
+   Information about medical centers and crisis centers in addition to transportation.
+
   </p>
 </section>
 
@@ -84,12 +81,13 @@
 
 
        <div style="margin-top: 20px;">
-      <h2 style="margin: 0;font-size: 60px;">Social Services</h2>
+      <h2 style="margin: 0;font-size: 60px;font-family: san-serf, Verdana;">Social Services</h2>
 
     </div>
   </a>
-  <p>
-   TBD.
+  <p  style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">
+      Information about social services currently available near you.
+
   </p>
 </section>
 
@@ -185,7 +183,7 @@
   {% if category_name == 'medical' %}
     <section  class="medicalpageback" style="text-align: center; padding: 50px">
       <h2 style="font-size: 60px;">Medical Aid & Support Centers</h2>
-        <p style="font-size: 30px;">San Diego County</p>
+        <p style="font-size: 45px;">San Diego County</p>
             <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
             <script src='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js'></script>
             <link href='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css' rel='stylesheet' />
@@ -193,7 +191,7 @@
 
 
                 .medicalpageback {
-                background-image: url("{{ url_for('static', filename='images/Medical_Back.png')}}");
+                background-image: url("{{ url_for('static', filename='images/Medical_Back.jpg')}}");
                 background-repeat: no-repeat;
                 background-position: center;
                 background-color: white;
@@ -225,10 +223,7 @@ medical_centers = [
         'lat': 32.79900660506265,
         'lon': -116.9601865134914,
         'name': 'Aging & Independence Services',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020',
-
-
-       //"Available Clean Beds": [326,325,324,323,322]
+        'location': '389 Magnolia Ave, El Cajon, CA 92020'
 
     },
     {
@@ -236,43 +231,43 @@ medical_centers = [
         'lat': 32.71599167547079,
         'lon': -117.1560215,
         'name': 'Senior Impact',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020'
+        'location': '928 Broadway, San Diego, 92101'
     },
     {
 
         'lat':32.731718449871316,
         'lon':-117.16492089994334,
         'name': 'St. Paul\'s PACE San Diego',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020'
+        'location': '111 Elm St, San Diego, CA 92101'
     },
     {
 
         'lat': 32.723514016694836,
         'lon': -117.16139325969378,
         'name': 'Street Corner Care',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020'
+        'location': '320 Date St, San Diego, CA 92101'
     },
     {
 
         'lat': 32.834611021571824,
         'lon':   -117.12371306131709,
         'name': 'Elder Help of San Diego',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020'
+        'location': '9590 Chesapeake Dr, San Diego, CA 92123'
     },
     {
 
         'lat':32.718670345363364,
         'lon': -117.15962191899425,
         'name': 'Downtown Family Health Center at Connections',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020'
+        'location': '1250 South Ave #100, San Diego, CA 92101'
 
     },
     {
 
         'lat': 32.70613593008157,
         'lon': -117.1500831480566,
-        'name': 'Father Joe\'s Villages Village Health Center',
-        'location': '389 Magnolia Ave, El Cajon, CA 92020'
+        'name': 'Father Joe\'s Villages Village Health    Center',
+        'location': '1501 Imperial Ave, San Diego, CA 92101'
     }
 
 ];
@@ -306,26 +301,55 @@ for (let i = 0; i < medical_centers.length; i++) {
 <br>
 <br>
 <br>
- <p> <div style="font-size: 60px;"><strong>Do You Need Transportation?</strong></p>
- <p><div style="font-size: 45px;">Call:</p>
+ <p> <div style="font-size: 60px; color:#10C809;"><strong>Free Transportation:</strong></p>
 
-  <p><div style="font-size: 50px;">FOR AGES 60+<br>Facilitating Access to Coordinated Transportation (FACT) -  (888) 924-3228</p>
-   <p><div style="font-size: 50px;">NAME  -  PHONE NUMBER</p>
+     <img  src= "{{ url_for('static', filename='images/transport.jpg')}}"
+           style="width: 300px; border-radius: 8px;">
 
 
+ <p><div style="font-size: 45px;color: #2746F5">Contact Us:</p>
+
+  <p><div style="font-size: 50px;color: black">Facilitating Access to Coordinated Transportation (FACT)</p>
+   <p><div style="font-size: 50px;color: #097005">(888) 924-3228</p>
+                    <br>
+                    <br>
+<p><div style="font-size: 50px;color: black">SenioRide Program (also by FACT) </p>
+
+                        <p><div style="font-size: 50px;color: yellow">Enrollment Is Free But Required</p>
+
+   <p><div style="font-size: 50px;color: #097005">619-295-8393 ext. 314</p>
 
     </section>
 
   {% elif category_name == 'jobs' %}
-    <section style="text-align: center; padding: 50px">
-      <h2>Employment & Job Programs</h2>
-      <p>TBD.</p>
+    <section class="jobsimage" style="text-align: center; padding: 50px">
+        <div style="font-size: 50px; font-family: san-serf, Verdana;color: black;background-color: rgba(255, 255, 255, 0.5);">Employment & Job Programs</div>
+        <style>
+        .jobsimage {
+                background-image: url("{{ url_for('static', filename='images/coming_soon.png')}}");
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: white;
+                background-size: cover;
+                background-attachment: scroll;
+
+
+             }
+         </style>
+
+
+
+
+
+
+
     </section>
 
   {% elif category_name == 'housing' %}
     <section style="text-align: center; padding: 50px">
-      <h2>Housing & Shelter</h2>
-      <p>San Diego County Shelter Locations:</p>
+      <h2 style="font-size: 50px;font-family: san-serf, Verdana;">Shelters</h2>
+      <p style="font-size: 35px;font-family: san-serf, Verdana;">San Diego County Shelter Locations:</p>
        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
             <script src='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.js'></script>
             <link href='https://api.mapbox.com/mapbox-gl-js/v3.17.0-beta.1/mapbox-gl.css' rel='stylesheet' />
@@ -340,22 +364,19 @@ for (let i = 0; i < medical_centers.length; i++) {
                     const map = new mapboxgl.Map({
                     container: 'map2',
                     style: 'mapbox://styles/mapbox/streets-v12',
-                    center: [-117.16, 32.72],
-                    zoom: 11
+                    center: [-117.05381, 32.88264],
+                    zoom: 9
                     });
 
  shelters = [
-    {'id': 0, 'lat': 32.70339, 'lon': -117.15072, 'name': 'Alpha Project Bridge Shelter I'},
-    {'id': 1, 'lat': 32.70639, 'lon': -117.14864, 'name': 'Alpha Project Bridge Shelter II'},
-    {'id': 2, 'lat': 32.70561, 'lon': -117.15011, 'name': 'Father Joe\'s Villages Bishop Maher Center'},
-    {'id': 3, 'lat': 32.75317, 'lon': -117.20764, 'name': 'Community Harm Reduction Shelter<br>(C-HRT)'},
-    {'id': 4, 'lat': 32.74428, 'lon': -117.19197, 'name': 'Point Loma Campus<br>(Veterans Village of San Diego)'},
-    {'id': 5, 'lat': 32.71325, 'lon': -117.15733, 'name': 'Rachel\'s Promise Women\'s Shelter'},
-    {'id': 6, 'lat': 32.75325, 'lon': -117.20094, 'name': 'Rosecrans Shelter'},
-    {'id': 7, 'lat': 32.71867, 'lon': -117.15939, 'name': 'PATH Connections Housing'},
-    {'id': 8, 'lat': 32.66822, 'lon': -117.17103, 'name': 'South County Lighthouse<br>(San Diego Rescue Mission)'},
-    {'id': 9, 'lat': 32.72258, 'lon': -117.19233, 'name': 'Seniors Landing Bridge Shelter'},
-    {'id': 10, 'lat': 32.74478, 'lon': -117.19233, 'name': 'Community Harm Reduction Safe Haven Shelter'}
+
+    {'lat': 32.72134, 'lon': -117.16098, 'name': 'Gary & Mary West Senior Wellness Center', 'location': '1525 4th Ave, San Diego, CA 92101'},
+    { 'lat': 32.72941, 'lon': -117.16402, 'name': 'Salvation Army Silvercrest Senior Residence', 'location': '727 E St, San Diego, CA 92101'},
+    { 'lat': 32.83475, 'lon': -117.12373, 'name': 'ElderHelp of San Diego', 'location': '9590 Chesapeake Dr, San Diego, CA 92123'},
+     { 'lat': 32.77484, 'lon': -117.12753, 'name': 'Community HousingWorks', 'location':  '3111 Camino Del Rio N #800, San Diego, CA 92108'},
+    { 'lat': 33.12515, 'lon': -117.09185, 'name': 'Interfaith Community Services-Senior Housing Programs', 'location': '550 W Washington Ave, Escondido, CA 92025'},
+     { 'lat': 32.72416, 'lon': -117.16369, 'name': 'San Diego Rescue Mission', 'location':   '120 Elm St, San Diego, CA 92101'}
+
 ]
 
 for (let i = 0; i < shelters.length; i++) {
@@ -368,7 +389,7 @@ for (let i = 0; i < shelters.length; i++) {
         new mapboxgl.Popup({ offset: 25, maxWidth: "none" })
           .setHTML(
             `<div style="font-size: 30px;padding: 30px;max-width: 600px;"><strong>${shelter.name}<strong><br>
-            <div style="font-size: 30px;padding: 30px;max-width: 600px;">Location:<br><br>${shelter.id}</div>
+            <div style="font-size: 30px;padding: 30px;max-width: 600px;">Location:<br><br>${shelter.location}</div>
 
           `)
       )
@@ -382,9 +403,23 @@ for (let i = 0; i < shelters.length; i++) {
     </section>
 
   {% elif category_name == 'socserv' %}
-    <section style="padding: 50px; text-align: center;">
-      <h2>Social Services</h2>
-      <p>TBD.</p>
+     <section class="socservimage" style="text-align: center; padding: 50px">
+      <div style="font-size: 50px; font-family: san-serf, Verdana;color: black;background-color: rgba(255, 255, 255, 0.5);">Social Services</div>
+        <style>
+        .socservimage {
+                background-image: url("{{ url_for('static', filename='images/coming_soon.png')}}");
+                height: 100vh;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-color: white;
+                background-size: cover;
+                background-attachment: scroll;
+             }
+         </style>
+
+
+
+
     </section>
 
 
@@ -396,15 +431,30 @@ for (let i = 0; i < shelters.length; i++) {
 
 {% elif tab == 'Trends' %}
   <section style="padding: 50px;">
-    <h2 style="text-align: center; font-size: 40px">Trends in the Population: </h2>
-    <div style="text-align: center;">
+    <h2 style="text-align: center; font-size: 50px;font-family: san-serf, Verdana;">Trends in the Population: </h2>
+    <div style="text-align: center;font-size: 30px;font-family: san-serf, Verdana;">
       <p></p>
       <h2>The information below is courtesy of San Diego County Office</h2>
       <img
   src="{{ url_for('static', filename='/Unhouse Seniors.png') }}"
  style="max-width: 100%; height: auto; display: block; margin: 40px auto;"
-  title="Housing Services PDF">
       </img>
+
+        <img
+  src="{{ url_for('static', filename='/Disabilities.png') }}"
+ style="max-width: 100%; height: auto; display: block; margin: 40px auto;"
+      </img>
+
+
+        <p style="text-align: center; font-size: 50px;font-family: san-serf, Verdana;">
+            <strong>The following graph shows the total count of unhoused individuals — across all ages:</strong> </p>
+ <img
+  src="{{ url_for('static', filename='/San Diego County Experiencing Homelessness.png') }}"
+ style="max-width: 100%; height: auto; display: block; margin: 40px auto;"
+      </img>
+
+
+
     </div>
   </section>
 
@@ -416,8 +466,8 @@ for (let i = 0; i < shelters.length; i++) {
 
 
 
-{% elif tab == 'About This Website' %}
-<img src="https://gcdnb.pbrd.co/images/bpRW2t1jOgFr.png"
+{% elif tab == 'Our Mission' %}
+<img src="{{ url_for('static', filename='images/helping_seniors.jpg') }}"
      alt="Alternative text" style="width:100%; height:100%;">
 
 
@@ -425,24 +475,52 @@ for (let i = 0; i < shelters.length; i++) {
 
 
 
-  <section style="position: absolute; top: 200px; left: 120px;">
-    <h2 style="text-align: center; font-size: 80px; color: black;background-color: rgba(255, 255, 255, 0.5);">Information:</h2>
-    <p style="font-size: 50px; color: black;background-color: rgba(255, 255, 255, 0.5);">Our website allows people who are experiencing housing crisis and impaired with technological literacy
-        to navigate and use resources with simplicity.
-    <br>An application is in the works.</p>
+  <section style="position: absolute; top: 500px; left: 120px;">
+    <h2 style="text-align: center; font-size: 80px; font-family: san-serf, Verdana; color: black;">Mission Statement:</h2>
+    <p style="font-size: 50px; font-family: san-serf, Verdana;color: black;background-color: rgba(255, 255, 255, 0.5);">Our mission is to provide a website platform
+        which allows unhoused seniors with disabilities and/or technological challenges to access resources easily.
+    </section>
+    <section style="position: absolute; text-align: center; top: 1200px; left: 300px">
+      <p style="margin: 0;font-size: 60px; font-family: san-serf, Verdana;"><strong>Created By:</strong></p>
+        <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">Jesus Garibay</p>
+      <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">Email: jgaribayavalos@sdsu.edu</p>
+      <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">+1 5055372079</p>
+        <br>
+      <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">Juan Lemus</p>
+      <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">Email: jlemus9029@sdsu.edu</p>
+      <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;">+1 5054924528</p>
+    </div>
   </section>
 
-{% elif tab == 'Contact Us' %}
-  <section style="padding: 50px;">
-    <h2 style="text-align: center; font-size: 60px">Creators:</h2>
-    <div style="text-align: center;">
-      <p>Jesus Garibay</p>
-      <p>Email: jgaribayavalos@sdsu.edu</p>
-      <p>760-333-333</p>
-      <p>Juan Lemus</p>
-      <p>Email: ddfdffd@sdsu.edu</p>
-      <p>760-333-333</p>
+{% elif tab == 'Emergency Help' %}
+  <section class="emergencyimage" style="text-align: center; padding: 1px">
+
+      <img src="{{ url_for('static', filename='images/emergency.jpg') }}"
+     style="max-width: 100%; height: 300px; display: block; margin: -1px auto;">
+
+
+      <div style="text-align: center;">
+<p style="margin: 0;font-size: 60px; font-family: san-serf, Verdana;">Crisis Hotlines</p>
+          <br>
+          <br>
+          <br>
+
+      <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;"><strong>Suicide and Crisis Lifeline</strong></p>
+           <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;color: red">Call:   988</p>
+          <br>
+          <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;"><strong>The San Diego Access & Crisis Line (ACL)</strong></p>
+           <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;color: red">Call:  1-888-724-7240</p>
+<br>
+          <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;"><strong>Aging & Independence Services</strong></p>
+           <p style="margin: 0;font-size: 45px; font-family: san-serf, Verdana;color: red">Call:  800-339-4661</p>
+
+
+
+
     </div>
+
+
+
   </section>
 
 
