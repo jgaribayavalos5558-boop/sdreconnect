@@ -371,10 +371,10 @@ for (let i = 0; i < medical_centers.length; i++) {
  shelters = [
 
     {'lat': 32.72134, 'lon': -117.16098, 'name': 'Gary & Mary West Senior Wellness Center', 'location': '1525 4th Ave, San Diego, CA 92101', 'Beds Available': '23', 'image': '/static/images/green.png'},
-    { 'lat': 32.72941, 'lon': -117.16402, 'name': 'Salvation Army Silvercrest Senior Residence', 'location': '727 E St, San Diego, CA 92101', 'Full':'','image': '/static/images/red.png'},
-    { 'lat': 32.83475, 'lon': -117.12373, 'name': 'ElderHelp of San Diego', 'location': '9590 Chesapeake Dr, San Diego, CA 92123','Full':'','image': '/static/images/red.png'},
+    { 'lat': 32.72941, 'lon': -117.16402, 'name': 'Salvation Army Silvercrest Senior Residence', 'location': '727 E St, San Diego, CA 92101', 'Closed':'','image': '/static/images/closed.png'},
+    { 'lat': 32.83475, 'lon': -117.12373, 'name': 'ElderHelp of San Diego', 'location': '9590 Chesapeake Dr, San Diego, CA 92123','Full':'  ','image': '/static/images/red.png'},
      { 'lat': 32.77484, 'lon': -117.12753, 'name': 'Community HousingWorks', 'location':  '3111 Camino Del Rio N #800, San Diego, CA 92108', 'Beds Available': '123','image': '/static/images/green.png'},
-    { 'lat': 33.12515, 'lon': -117.09185, 'name': 'Interfaith Community Services-Senior Housing Programs', 'location': '550 W Washington Ave, Escondido, CA 92025', 'Full': '','image': '/static/images/red.png'},
+    { 'lat': 33.12515, 'lon': -117.09185, 'name': 'Interfaith Community Services-Senior Housing Programs', 'location': '550 W Washington Ave, Escondido, CA 92025', 'Full': '  ','image': '/static/images/red.png'},
      { 'lat': 32.72416, 'lon': -117.16369, 'name': 'San Diego Rescue Mission', 'location':   '120 Elm St, San Diego, CA 92101', 'Beds Available': '52','image': '/static/images/green.png'}
 
 ]
@@ -385,14 +385,19 @@ for (let i = 0; i < shelters.length; i++) {
    let statusLabel;
 let statusValue;
 
-// Check which property exists
+
 if (shelter["Beds Available"]) {
   statusLabel = "Beds Available";
   statusValue = shelter["Beds Available"];
-} else {
+} else if(shelter["Full"]){
   statusLabel = "Full";
-  statusValue = shelter["Full"] || ""; // show empty if no value
+  statusValue = shelter["Full"] || "  ";
+} else {
+        statusLabel = "Closed";
+  statusValue = shelter["Closed"] || "";
+
 }
+
 
     // Add a marker for this shelter
     new mapboxgl.Marker( {color: 'red'})
